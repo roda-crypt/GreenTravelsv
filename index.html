@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Travel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reservacion.css">
+    <link rel="stylesheet" href="css/styles.responsive.css">
+</head>
+<body>
+    <!-- Header Moderno -->
+    <header class="site-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <a href="#home" class="logo" id="logo">
+                <img src="img/logo.jpg" alt="Green Travel Logo" class="logo-image">
+                <span class="logo-text">Green Travel</span>
+            </a>
+
+            <!-- Navegación Principal -->
+            <nav class="main-navigation" id="mainNavigation">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                </ul>
+            </nav>
+
+            <!-- Sección de Autenticación (Mi Cuenta / Usuario) -->
+            <div class="header-actions">
+                <div id="authSection">
+                    <!-- Estado: No logueado -->
+                    <button id="authButton" class="btn-primary">
+                        <i class="fas fa-user"></i> Mi Cuenta
+                    </button>
+                    <!-- Estado: Logueado (Menú Desplegable) -->
+                    <div id="userSection" style="display: none;" class="user-dropdown">
+                        <button id="userMenuButton" class="user-menu-button">
+                            <i class="fas fa-user-circle"></i>
+                            <span id="usernameDisplay"></span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div id="userDropdownMenu" class="user-dropdown-menu">
+                            <a href="#"><i class="fas fa-user"></i> Mi Perfil</a>
+                            <!-- NUEVO: Enlace para ver reservas con ID correcto -->
+                            <a href="#" id="viewReservationsLink"><i class="fas fa-clipboard-list"></i> Mis Reservas</a>
+                            <hr class="dropdown-divider">
+                            <a href="#" id="logoutLink"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botón Menú Móvil -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Descubre la Naturaleza</h1>
+            <p>Explora los destinos más espectaculares del mundo mientras cuidas el planeta. Green Travel te ofrece experiencias únicas de turismo sostenible.</p>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <br>
+                <h2 id="about">Sobre GREEN TRAVEL</h2>
+                <p class="about-text">
+                    En GREEN TRAVEL, creemos que viajar es más que conocer lugares: es cuidar el planeta mientras disfrutas experiencias inolvidables. Somos una agencia comprometida con el turismo sostenible, ofreciendo paquetes que integran naturaleza, cultura y responsabilidad ambiental. Nuestro objetivo es que cada viaje sea una oportunidad para explorar el mundo y protegerlo al mismo tiempo.
+                </p>
+                
+                <div class="mission-vision">
+                    <div class="mission-box">
+                        <h3><i class="fas fa-bullseye"></i> Misión</h3>
+                        <p>Promover experiencias turísticas únicas y responsables que conecten a las personas con la naturaleza y la cultura, fomentando prácticas sostenibles que protejan el medio ambiente y beneficien a las comunidades locales.</p>
+                    </div>
+                    <div class="vision-box">
+                        <h3><i class="fas fa-eye"></i> Visión</h3>
+                        <p>Ser la agencia líder en turismo sostenible en la región, reconocida por ofrecer viajes que combinan aventura, conciencia ecológica y desarrollo comunitario, contribuyendo a un planeta más verde y saludable.</p>
+                    </div>
+                </div>
+                
+                <div class="values-container">
+                    <h3>Nuestros Valores</h3>
+                    <div class="values-grid">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <div class="value-title">Sostenibilidad</div>
+                            <div class="value-description">Cada viaje respeta el entorno y reduce el impacto ambiental.</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="value-title">Responsabilidad</div>
+                            <div class="value-description">Compromiso con la preservación de recursos naturales y culturales.</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="value-title">Innovación</div>
+                            <div class="value-description">Diseñamos experiencias únicas que integran ecoturismo y tecnología.</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="value-title">Transparencia</div>
+                            <div class="value-description">Honestidad en nuestros procesos y comunicación con clientes.</div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="value-title">Solidaridad</div>
+                            <div class="value-description">Apoyo a comunidades locales mediante turismo responsable.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtros Avanzados -->
+    <section class="filters-section" id="catalogo">
+        <div class="filters-header">
+            <h2><br><br>Filtra por categoría</h2>
+            <button class="btn-primary" onclick="resetFilters()">
+                <i class="fas fa-redo"></i> Limpiar Filtros
+            </button>
+        </div>
+        <div class="filter-tags">
+            <div class="filter-tag active" data-filter="all">Todos</div>
+            <div class="filter-tag" data-filter="montaña">Montaña</div>
+            <div class="filter-tag" data-filter="ciudad">Ciudad</div>
+            <div class="filter-tag" data-filter="aventura">Aventura</div>
+            <div class="filter-tag" data-filter="cultural">Cultural</div>
+            <div class="filter-tag" data-filter="familiar">Familiar</div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Viajes -->
+    <section class="catalog-section">
+        <div class="section-header">
+            <h2>Nuestros Viajes Ecológicos</h2>
+            <p>Explora nuestra selección de paquetes turísticos sostenibles diseñados para ti</p>
+        </div>
+        <div class="catalog-grid" id="catalogGrid">
+            <!-- Tarjeta 1 -->
+            <div class="travel-card" data-category="aventura montaña">
+                <div class="travel-card-image">
+                    <img src="https://guanacos.com/wp-content/uploads/2024/01/GUANACOS-PARQUE-NACIONAL-EL-IMPOSIBLE-4-768x512.jpg" alt="Trekking en Perú">
+                    <div class="travel-card-badge">Popular</div>
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Ruta Mistica: Tour Parque Nacional El Imposible y Ruta El Naranjal</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i> Aguachapan, El Salvador
+                    </div>
+                    <p class="travel-card-description">
+                        Explora la belleza natural de El Salvador en este tour combinado que te llevará al Parque Nacional El Imposible y la espectacular Ruta El Naranjal.
+                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Naturaleza</span>
+                        <span class="travel-card-feature">Montaña</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (85 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$235 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Ruta Mistica: Tour Parque Nacional El Imposible y Ruta El Naranjal', 'https://guanacos.com/wp-content/uploads/2024/01/GUANACOS-PARQUE-NACIONAL-EL-IMPOSIBLE-4-768x512.jpg', 'Explora la belleza natural de El Salvador en este tour combinado que te llevará al Parque Nacional El Imposible y la espectacular Ruta El Naranjal.', '3 días / 2 noches', '2-8 personas', 'Eco-Lodge y posada local', '3 desayunos, 3 almuerzos, 2 cenas', '$235', 'https://www.google.com/maps/d/embed?mid=1pYlsur7pWcQt1VNDU2-wy78UpnT5xAs&hl=es&ehbc=2E312F', 'itin1')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 2 -->
+            <div class="travel-card" data-category="montaña aventura naturaleza">
+                <div class="travel-card-image">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPu0cf22HxVH8aszz7ogSbm2Qq5TNcVXR0SA&s" alt="Espejo Verde entre Gigantes Extremos">
+                    <div class="travel-card-badge">Popular</div>
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Espejo Verde entre Gigantes Extremos</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i> Complejo Volcánico, El Salvador
+                    </div>
+                    <p class="travel-card-description">
+                        Una aventura inolvidable por los imponentes volcanes de Santa Ana e Izalco, culminando en la serena belleza de la Laguna Verde. Ideal para amantes de la naturaleza y el senderismo.
+                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Montaña</span>
+                        <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Naturaleza</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.8 (120 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$299 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Espejo Verde entre Gigantes Extremos', 'https://cronicoviajero.com/wp-content/uploads/ruta-volcan-santa-ana.jpg', 'Una aventura inolvidable por los imponentes volcanes de Santa Ana e Izalco, culminando en la serena belleza de la Laguna Verde. Ideal para amantes de la naturaleza y el senderismo.', '3 días / 2 noches', '2-8 personas', 'Hotel boutique y cabañas rústicas', 'Alimentación completa', '$299', 'https://www.google.com/maps/d/embed?mid=11LZslNNTYkTY45op7d6ba1qt6-2tu_U&hl=es&ehbc=2E312F', 'itin2')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Tarjeta 3 -->
+            <div class="travel-card" data-category="cultural ciudad">
+                <div class="travel-card-image">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1RHf_-mYYAmf4phnh13d0z7sFGGShXgON2Z4E1P_MaostiPxBMha0huI6Mc9iGpmYgVrn7J8oL2PVV4QcKS5y1CpK0asvJ2Ikc-BuCG7A8mykpPiF3141ExfDmzOSgsSI8fMZIwgmY9Q/s1600/Lago-Pet%25C3%25A9n-Itz%25C3%25A1-Guatemala.jpg" alt="Kyoto Sostenible">
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Visita a Lago Petén Itzá y Laguna Lachuá</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i> Guatemala
+                    </div>
+                    <p class="travel-card-description">
+                        El Lago Petén Itzá y la Laguna Lachuá te invitan a descubrir dos paraísos naturales únicos en Guatemala. Petén Itzá sorprende con sus aguas turquesa, pueblos llenos de historia maya y paisajes que enamoran a primera vista. Lachuá, escondida en la selva, deslumbra con su forma perfecta y aguas cristalinas que parecen un espejo natural. Dos destinos mágicos, ideales para desconectar, explorar y dejarse sorprender por la belleza pura de la naturaleza.                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Ciudad</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (156 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$440.00 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Visita a Lago Petén Itzá y Laguna Lachuá', 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh1RHf_-mYYAmf4phnh13d0z7sFGGShXgON2Z4E1P_MaostiPxBMha0huI6Mc9iGpmYgVrn7J8oL2PVV4QcKS5y1CpK0asvJ2Ikc-BuCG7A8mykpPiF3141ExfDmzOSgsSI8fMZIwgmY9Q/s1600/Lago-Pet%25C3%25A9n-Itz%25C3%25A1-Guatemala.jpg', 'El Lago Petén Itzá y la Laguna Lachuá te invitan a descubrir dos paraísos naturales únicos en Guatemala. Petén Itzá sorprende con sus aguas turquesa, pueblos llenos de historia maya y paisajes que enamoran a primera vista. Lachuá, escondida en la selva, deslumbra con su forma perfecta y aguas cristalinas que parecen un espejo natural. Dos destinos mágicos, ideales para desconectar, explorar y dejarse sorprender por la belleza pura de la naturaleza.', '5 días / 4 noches', 'por persona', 'Hotel 3 estrellas', 'Desayuno incluido', '$440.00', 'https://www.google.com/maps/d/embed?mid=1VUYoB_2k-0LV6B6yj6NJKjQUJrnqHFY&hl=es&ehbc=2E312F', 'itin3')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 4 -->
+            <div class="travel-card" data-category="aventura familiar">
+                <div class="travel-card-image">
+                    <img src="https://www.hobbitenango.com/web/image/3823-23da3737/DJI_0221.webp" alt="Ruta Mágica: Antigua y Hobbitenango">
+                    <div class="travel-card-badge">Popular</div>
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Ruta Mágica: Entre Historia y Fantasía</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i> Antigua Guatemala y Hobbitenango
+                    </div>
+                    <p class="travel-card-description">
+                        Combina la riqueza colonial de Antigua con la experiencia única en Hobbitenango. Un viaje mágico entre historia y fantasía en el corazón de Guatemala.
+                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Aventura</span>
+                        <span class="travel-card-feature">Fantasía</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.9 (125 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$480 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Ruta Mágica: Entre Historia y Fantasía', 'https://www.hobbitenango.com/web/image/3823-23da3737/DJI_0221.webp', 'Combina la riqueza colonial de Antigua con la experiencia única en Hobbitenango. Un viaje mágico entre historia y fantasía en el corazón de Guatemala.', '3 días / 2 noches', '2-8 personas', 'Hotel boutique y cabaña temática', 'Desayunos y almuerzos incluidos', '$480', 'https://www.google.com/maps/d/embed?mid=1rZ4NHnKzSgQYX_mEpuOzSwlY9SgXpvA&hl=es&ehbc=2', 'itin4')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 5 -->
+            <div class="travel-card" data-category="familiar montaña">
+                <div class="travel-card-image">
+                    <img src="https://www.visitcentroamerica.com/wp-content/uploads/2025/04/Tikal-National-Park-Aerial-View-Guatemala-Centroamerica-04.webp" alt="Costa Rica Familiar">
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Escapada a Tikal</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i>Guatemala
+                    </div>
+                    <p class="travel-card-description">
+                        Tikal, Río Dulce y el Castillo de San Felipe forman un recorrido inolvidable por la historia, la naturaleza y la magia de Guatemala. Tikal te transporta al corazón del mundo maya con imponentes templos que emergen entre la selva y una energía ancestral que se siente en cada rincón. Río Dulce sorprende con sus aguas tranquilas, su exuberante vegetación y la calidez de sus comunidades ribereñas, creando un ambiente perfecto para relajarse y conectar con la naturaleza. Finalmente, el Castillo de San Felipe, vigilante histórico a la entrada del lago, cautiva con su arquitectura colonial y sus historias de piratas. Tres destinos llenos de encanto que combinan aventura, cultura y paisajes extraordinarios.                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Familiar</span>
+                        <span class="travel-card-feature">Naturaleza</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>4.2 (98 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$345.22 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Escapada a Tikal', 'https://www.visitcentroamerica.com/wp-content/uploads/2025/04/Tikal-National-Park-Aerial-View-Guatemala-Centroamerica-04.webp', 'Tikal, Río Dulce y el Castillo de San Felipe forman un recorrido inolvidable por la historia, la naturaleza y la magia de Guatemala. Tikal te transporta al corazón del mundo maya con imponentes templos que emergen entre la selva y una energía ancestral que se siente en cada rincón. Río Dulce sorprende con sus aguas tranquilas, su exuberante vegetación y la calidez de sus comunidades ribereñas, creando un ambiente perfecto para relajarse y conectar con la naturaleza. Finalmente, el Castillo de San Felipe, vigilante histórico a la entrada del lago, cautiva con su arquitectura colonial y sus historias de piratas. Tres destinos llenos de encanto que combinan aventura, cultura y paisajes extraordinarios.', '3 días / 2 noches', '1-3 personas', 'Hotel Catamaran', 'Desayuno y cena', '$345.22', 'https://www.google.com/maps/d/embed?mid=19vgf9fXKeHDDl7lJzfIQf061GENWKy8&hl=es&ehbc=2E312F', 'itin5')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tarjeta 6 -->
+            <div class="travel-card" data-category="naturaleza playa">
+                <div class="travel-card-image">
+                    <img src="https://turismo.sv/wp-content/uploads/2019/06/barra-de-santiago-5.jpg" alt="Conexión con la naturaleza verde y salvaje">
+                </div>
+                <div class="travel-card-content">
+                    <h3 class="travel-card-title">Conexión con la naturaleza verde y salvaje</h3>
+                    <div class="travel-card-location">
+                        <i class="fas fa-map-marker-alt"></i> Ecoparque Santa Rita y Barra de Santiago, El Salvador
+                    </div>
+                    <p class="travel-card-description">
+                        Explora la biodiversidad de El Salvador en el Ecoparque Santa Rita y disfruta de los manglares de Barra de Santiago.
+                    </p>
+                    <div class="travel-card-features">
+                        <span class="travel-card-feature">Naturaleza</span>
+                        <span class="travel-card-feature">Playa</span>
+                        <span class="travel-card-feature">Aventura</span>
+                    </div>
+                    <div class="travel-card-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>4.7 (89 reseñas)</span>
+                    </div>
+                    <div class="travel-card-footer">
+                        <div class="travel-card-price">$309 <span>por persona</span></div>
+                        <button class="btn-primary" onclick="openModal('Conexión con la naturaleza verde y salvaje', 'https://juanlievano.com/wp-content/uploads/2021/07/Playa5.jpg', 'Explora la biodiversidad de El Salvador en el Ecoparque Santa Rita y disfruta de los manglares de Barra de Santiago.', '3 días / 2 noches', '4-10 personas', 'Hoteles locales', 'Desayuno incluido', '$309', 'https://www.google.com/maps/d/embed?mid=1TazrRUR3flNgzhGr6TGJ_z_C_tGURb8&hl=es&ehbc=2E312F', 'itin6')">Ver detalles</button>
+                    </div>
+                </div>
+            </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn-primary" onclick="loadMore()">
+                <i class="fas fa-plus-circle"></i> Cargar Más
+            </button>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section" id="contacto">
+        <div class="newsletter-container">
+            <h2>Suscríbete a Nuestro Newsletter Ecológico</h2>
+            <p>Recibe las mejores ofertas sostenibles y destinos exclusivos directamente en tu correo</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i> Suscribirse
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre Green Travel</h3>
+                <p>Tu agencia de confianza para descubrir el mundo de forma sostenible. Ofrecemos experiencias únicas y memorables en los destinos más increíbles con el menor impacto ambiental.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/greentravelsv25?igsh=aXI0M3c3dzNvejJq"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/17ygCWZfvM/?mibextid=wwXIfr"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                </svg></i></a>
+                   <!-- <a href=""><i class="fab fa-twitter"></i></a>-->
+                    <a href="https://www.tiktok.com/@green.travel.sv25?_r=1&_t=ZM-91fb6YwXeGq"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                                <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                                </svg></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#about">Sobre Nosotros</a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +503 7121-9072</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Universidad Tecnologica de El Salvador</li> 
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Green Travel</p>        
+        </div>
+    </footer>
+
+    <!-- Modal de Detalles -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <img id="modalImage" src="" alt="">
+            </div>
+            <div class="modal-body">
+                <h2 class="modal-title" id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                
+                <div class="modal-info">
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span id="modalDuration"></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-users"></i>
+                        <span id="modalGroupSize"></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-hotel"></i>
+                        <span id="modalAccommodation"></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-utensils"></i>
+                        <span id="modalMeals"></span>
+                    </div>
+                </div>
+
+                <!-- Mapa del Destino -->
+                <div class="map-container">
+                    <div class="map-overlay" id="mapOverlay" onclick="openMap()">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <span>Haz clic para ver el mapa del destino</span>
+                    </div>
+                    <iframe id="mapFrame" class="map-frame" src="" allowfullscreen></iframe>
+                </div>
+
+                <div class="itinerary">
+                    <h3>Itinerario del Viaje</h3>
+                    <div id="itineraryContent">
+                        <!-- El contenido se cargará dinámicamente -->
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 2rem;">
+                    <div>
+                        <div class="price-label">Precio por persona</div>
+                        <div class="price-value" id="modalPrice"></div>
+                    </div>
+                    <!-- Este botón ahora llama a bookNow() -->
+                    <button class="btn-primary" onclick="bookNow()">
+                        <i class="fas fa-shopping-cart"></i> Reservar Ahora
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Acción completada con éxito</span>
+    </div>
+
+    <!-- Modal de Autenticación (Login / Registro) -->
+    <div class="modal" id="authModal">
+        <div class="modal-content auth-modal-content">
+            <div class="modal-close" id="authModalCloseBtn">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="auth-header">
+                <h2 id="authModalTitle">Bienvenido a Green Travel</h2>
+            </div>
+
+            <!-- Pestañas de Login y Registro -->
+            <ul class="nav nav-tabs auth-tabs" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="tab" href="#loginTab">Iniciar Sesión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#registerTab">Crear Cuenta</a>
+                </li>
+            </ul>
+
+            <!-- Contenido de las Pestañas -->
+            <div class="tab-content auth-tab-content">
+                <!-- Pestaña de Iniciar Sesión -->
+                <div class="tab-pane fade show active" id="loginTab">
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <input type="text" id="loginUsername" class="form-input" required>
+                            <label for="loginUsername" class="form-label">Nombre de Usuario</label>
+                        </div>
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <input type="password" id="loginPassword" class="form-input" required>
+                            <label for="loginPassword" class="form-label">Contraseña</label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Entrar</button>
+                    </form>
+                </div>
+
+                <!-- Pestaña de Crear Cuenta -->
+                <div class="tab-pane fade" id="registerTab">
+                    <form id="registerForm" class="auth-form">
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <input type="text" id="registerUsername" class="form-input" required>
+                            <label for="registerUsername" class="form-label">Elige un Nombre de Usuario</label>
+                        </div>
+                        <div class="form-group-floating">
+                            <div class="input-icon">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <input type="password" id="registerPassword" class="form-input" required>
+                            <label for="registerPassword" class="form-label">Crea una Contraseña</label>
+                        </div>
+                        <button type="submit" class="auth-submit-btn">Crear Cuenta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- =               MODAL DE RESERVA (NUEVO)                    = -->
+    <!-- ============================================================= -->
+<div class="modal" id="reservationModal">
+    <div class="modal-content reservation-modal-content">
+        <div class="modal-close" onclick="closeReservationModal()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-header">
+            <h2>Confirmar tu Reserva</h2>
+        </div>
+        <div class="modal-body">
+            <p>Por favor, completa los detalles para finalizar tu reserva.</p>
+            
+            <div class="reservation-summary">
+                <h4 id="reservationPackageTitle"></h4>
+                <p class="reservation-price" id="reservationPackagePrice"></p>
+            </div>
+
+            <form id="reservationForm">
+                <input type="hidden" id="packageTitleInput">
+                <input type="hidden" id="packagePriceInput">
+
+                <div class="form-group">
+                    <label for="travelDate"><i class="fas fa-calendar-alt"></i> Fecha de Viaje Deseada</label>
+                    <input type="date" id="travelDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="numberOfPeople"><i class="fas fa-users"></i> Número de Personas</label>
+                    <input type="number" id="numberOfPeople" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialRequests"><i class="fas fa-comment-dots"></i> Solicitudes Especiales (Opcional)</label>
+                    <textarea id="specialRequests" rows="3" placeholder="Ej. Alergias alimentarias, necesidades especiales, etc."></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeReservationModal()">
+                        <i class="fas fa-arrow-left"></i> Cancelar
+                    </button>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-check"></i> Confirmar Reserva
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+    <!-- ============================================================= -->
+    <!-- =               MODAL DE MIS RESERVAS (NUEVO)               = -->
+    <!-- ============================================================= -->
+    <div class="modal" id="myReservationsModal">
+        <div class="modal-content my-reservations-modal-content">
+            <div class="modal-close" onclick="closeMyReservationsModal()">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal-header">
+                <h2>Mis Reservas</h2>
+            </div>
+            <div class="modal-body">
+                <div id="reservationsList">
+                    <!-- Las reservas se cargarán aquí dinámicamente -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================= -->
+    <!-- =                 CHATBOT HTML                               = -->
+    <!-- ============================================================= -->
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar"><i class="fas fa-plane"></i></div>
+            <div class="chatbot-title">
+                <h3>Asistente Green Travel</h3>
+                <span class="status-indicator online"></span>
+            </div>
+            <button class="chatbot-toggle" id="chatbotToggle"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="message bot-message">
+                <div class="message-content">¡Hola! Soy tu asistente de Green Travel. Estoy aquí para ayudarte a encontrar el destino perfecto para tu próxima aventura sostenible. ¿En qué puedo ayudarte hoy?</div>
+            </div>
+        </div>
+        <div class="chatbot-suggestions" id="chatbotSuggestions">
+            <button class="suggestion-btn" onclick="sendSuggestion('Viajes familiares')">Viajes familiares</button>
+            <button class="suggestion-btn" onclick="sendSuggestion('Turismo sostenible')">Turismo sostenible</button>
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" id="chatbotInput" placeholder="Escribe tu pregunta aquí..." />
+            <button id="chatbotSendBtn"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <div class="chatbot-bubble" id="chatbotBubble">
+        <i class="fas fa-comments"></i>
+        <span>¿Necesitas ayuda?</span>
+    </div>
+
+    <!-- Scripts al final del body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- NUEVO: Script para el sistema de reservas -->
+    <script src="js/reservacion.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            const toggleBtn = document.getElementById("mobileMenuToggle");
+            const mainNav = document.getElementById("mainNavigation");
+
+            // Abrir/Cerrar menú
+            toggleBtn.addEventListener("click", () => {
+                mainNav.classList.toggle("active");
+                toggleBtn.classList.toggle("active");
+            });
+
+            // Cerrar menú al hacer clic en un enlace
+            document.querySelectorAll(".main-navigation a").forEach(link => {
+                link.addEventListener("click", () => {
+                    mainNav.classList.remove("active");
+                    toggleBtn.classList.remove("active");
+                });
+            });
+        });
+    </script>
+    
+
+</body>
+</html>

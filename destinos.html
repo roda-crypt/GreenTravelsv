@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Turísticos por País</title>
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/destinos.css">
+    
+
+</head>
+<body>
+    <header>
+        <div class="header-container">
+             <a href="index.html" class="logo" id="logo">
+                <img src="img/logo.jpg" alt="Green Travel Logo" class="logo-image">
+                <span class="logo-text">Green Travel</span>
+            </a>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menú" style="display:none;">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            </button>
+            <nav class="main-navigation">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="page-header">
+        <h1>Explora por País</h1>
+        <p>Descubre las maravillas que cada destino tiene para ofrecer. Elige un país y comienza tu aventura.</p>
+    </header>
+
+    <main class="container">
+        <nav class="tab-navigation">
+            <button class="tab-button active" onclick="openTab(event, 'elsalvador')">El Salvador</button>
+            <button class="tab-button" onclick="openTab(event, 'guatemala')">Guatemala</button>
+        </nav>
+
+        <!-- ==================== TAB DE EL SALVADOR ==================== -->
+        <div id="elsalvador" class="tab-content active">
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/parque-nacional-el-imposible/600/400" alt="Parque Nacional El Imposible">
+                <div class="destination-info">
+                    <h3 class="destination-title">Parque Nacional El Imposible</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Ahuachapán, Sierra de Apaneca-Lamatepec
+                    </div>
+                    <p class="destination-description">
+                        ¡Explora el corazón verde de El Salvador! Un santuario natural con bosques exuberantes, ríos cristalinos y miradores que te dejarán sin aliento. Perfecto para aventureros y amantes de la naturaleza.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Información General</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Área protegida de 5,000 hectáreas, Reserva de Biosfera UNESCO.</li>
+                            <li><i class="fas fa-check-circle"></i> Hogar de especies únicas como tigrillos, venados y aves exóticas.</li>
+                            <li><i class="fas fa-check-circle"></i> Altitud: 250 a 1,425 m s. n. m.</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-hiking"></i> Senderismo extremo y rutas interpretativas</li>
+                            <li><i class="fas fa-binoculars"></i> Avistamiento de aves y fotografía de fauna silvestre</li>
+                            <li><i class="fas fa-leaf"></i> Observación de flora y fauna</li>
+                            <li><i class="fas fa-water"></i> Baño en pozas naturales y cascadas escondidas</li>
+                            <li><i class="fas fa-campground"></i> Camping bajo las estrellas</li>
+                            <li><i class="fas fa-user-tie"></i> Tours guiados sobre conservación y biodiversidad</li>
+                            <li><i class="fas fa-biking"></i> Ciclismo de montaña en senderos seguros</li>
+                            <li><i class="fas fa-utensils"></i> Picnic en áreas designadas</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-shoe-prints"></i> Llevar calzado cómodo y repelente de insectos</li>
+                            <li><i class="fas fa-trash-alt"></i> No dejar basura, respeta la fauna y flora</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/finca-el-naranjal-cafe/600/400" alt="Finca El Naranjal">
+                <div class="destination-info">
+                    <h3 class="destination-title">Finca El Naranjal</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Municipio de Juayua, Departamento de Sonsonate
+                    </div>
+                    <p class="destination-description">
+                        Finca El Naranjal es un destino de ecoturismo y agroturístico, reconocido por su producción de café de alta calidad y su compromiso con la sostenibilidad. Ofrece experiencias únicas que combinan naturaleza, cultura, gastronomía y emersión en el proceso del café y la vida silvestre, ideal para quienes buscan turismo responsable y una experiencia única en la cultura rural.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-coffee"></i> Tour del café: desde la planta hasta la taza</li>
+                            <li><i class="fas fa-mug-hot"></i> Degustación de café gourmet y gastronomía local</li>
+                            <li><i class="fas fa-campground"></i> Camping en áreas seguras</li>
+                            <li><i class="fas fa-horse"></i> Cabalgatas y paseos en bicicleta</li>
+                            <li><i class="fas fa-hands"></i> Talleres de artesanía y cocina tradicional</li>
+                            <li><i class="fas fa-binoculars"></i> Observación de aves y fotografía panorámica</li>
+                            <li><i class="fas fa-hiking"></i> Senderismo en cafetales</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-calendar-check"></i> Reservar con anticipación en temporada alta</li>
+                            <li><i class="fas fa-tshirt"></i> Llevar ropa cómoda y abrigo (clima fresco)</li>
+                            <li><i class="fas fa-shopping-basket"></i> Probar el café local y productos artesanales</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/laguna-verde-el-salvador/600/400" alt="Laguna Verde">
+                <div class="destination-info">
+                    <h3 class="destination-title">Laguna Verde</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Apaneca, Ahuachapán
+                    </div>
+                    <p class="destination-description">
+                        Un espejo verde rodeado de bosques y cafetales, donde el silencio y la brisa fresca crean el escenario perfecto para relajarte y disfrutar la naturaleza, ideal para los amantes de la naturaleza y aventureros que aman realizar ecoturismo.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-ship"></i> Paseos en lancha y fotografía panorámica</li>
+                            <li><i class="fas fa-walking"></i> Senderismo y caminatas</li>
+                            <li><i class="fas fa-utensils"></i> Picnic y relajación</li>
+                            <li><i class="fas fa-atv"></i> Tours en cuatrimoto</li>
+                            <li><i class="fas fa-leaf"></i> Observación de flora y fauna</li>
+                            <li><i class="fas fa-binoculars"></i> Observación de aves</li>
+                            <li><i class="fas fa-fire"></i> Camping y fogatas nocturnas</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-camera"></i> Llevar cámara fotográfica y protector solar</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las áreas protegidas</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/ruta-de-los-volcanes-santa-ana/600/400" alt="Ruta de los Volcanes">
+                <div class="destination-info">
+                    <h3 class="destination-title">Ruta de los Volcanes</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Departamentos de Santa Ana y Sonsonate
+                    </div>
+                    <p class="destination-description">
+                        ¡Tres gigantes te esperan! Santa Ana, Izalco y Cerro Verde ofrecen una experiencia única entre cráteres, lagos y paisajes volcánicos que quitan el aliento ideal para los amantes de las actividades al aire libre, aventuras y experiencias de ecoturismo.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-mountain"></i> Ascenso al cráter turquesa del Santa Ana</li>
+                            <li><i class="fas fa-hiking"></i> Caminata por el Cerro Verde y miradores panorámicos</li>
+                            <li><i class="fas fa-camera"></i> Fotografía de paisajes volcánicos</li>
+                            <li><i class="fas fa-leaf"></i> Observación de flora y fauna</li>
+                            <li><i class="fas fa-mountain"></i> Acceso y caminata en el Volcán de Izalco</li>
+                            <li><i class="fas fa-tree"></i> Caminatas por bosques</li>
+                            <li><i class="fas fa-utensils"></i> Acceso a áreas de picnic y recreación</li>
+                            <li><i class="fas fa-utensils"></i> Experiencia Gastronómica local</li>
+                            <li><i class="fas fa-user-tie"></i> Tours guiados sobre geología y volcanes activos</li>
+                            <li><i class="fas fa-campground"></i> Camping y observación de estrellas</li>
+                            <li><i class="fas fa-hiking"></i> Senderismo</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-tint"></i> Llevar agua, snacks y ropa cómoda</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las áreas protegidas</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/barra-santiago-playa/600/400" alt="Barra de Santiago">
+                <div class="destination-info">
+                    <h3 class="destination-title">Barra de Santiago</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Municipio de Jujutla, departamento de Ahuachapan
+                    </div>
+                    <p class="destination-description">
+                        Un paraíso costero con playas y manglares llenos de vida. Ideal para surfistas, amantes del ecoturismo y quienes buscan desconexión total con la naturaleza, una zona de áreas naturales protegidas de El Salvador con aproximadamente 2,000 hectáreas declaradas sitio Ramsar.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-water"></i> Surf y deportes acuáticos</li>
+                            <li><i class="fas fa-ship"></i> Paseos en lancha por manglares y avistamiento de fauna</li>
+                            <li><i class="fas fa-kayak"></i> Kayak y pesca artesanal</li>
+                            <li><i class="fas fa-fish"></i> Avistamiento y Liberación de tortugas marinas (en temporada)</li>
+                            <li><i class="fas fa-utensils"></i> Gastronomía marina en restaurantes locales</li>
+                            <li><i class="fas fa-crow"></i> Avistamiento de cocodrilos</li>
+                            <li><i class="fas fa-sun"></i> Relajamiento en playa y disfrutar de atardeceres</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-sun"></i> Llevar bloqueador solar y sombrero</li>
+                            <li><i class="fas fa-egg"></i> Respetar las áreas de anidación de tortugas</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar el área protegida</li>
+                            <li><i class="fas fa-info-circle"></i> Seguir las indicaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/ecoparque-finca-santa-rita/600/400" alt="Ecoparque Finca Santa Rita">
+                <div class="destination-info">
+                    <h3 class="destination-title">Ecoparque Finca Santa Rita</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Municipio de Jujutla, departamento de Ahuachapán
+                    </div>
+                    <p class="destination-description">
+                        Un santuario natural protegido donde la conservación y la aventura se unen. Bosques tropicales, senderos y especies únicas te esperan para una experiencia inolvidable en la reserva de bosque tropical húmedo.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-hiking"></i> Senderismo ecológico y observación de fauna y flora</li>
+                            <li><i class="fas fa-user-tie"></i> Tours educativos sobre conservación</li>
+                            <li><i class="fas fa-campground"></i> Camping y fotografía de naturaleza</li>
+                            <li><i class="fas fa-seedling"></i> Talleres ambientales y experiencias sostenibles</li>
+                            <li><i class="fas fa-binoculars"></i> Avistamiento de aves y especies endémicas</li>
+                            <li><i class="fas fa-crow"></i> Avistamiento de cocodrilos</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-binoculars"></i> Llevar binoculares y cámara fotográfica</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las normas de conservación</li>
+                            <li><i class="fas fa-spray-can"></i> Llevar repelente y bloqueador</li>
+                            <li><i class="fas fa-tshirt"></i> Vestimenta cómoda</li>
+                            <li><i class="fas fa-tint"></i> Llevar agua</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- ==================== TAB DE GUATEMALA ==================== -->
+        <div id="guatemala" class="tab-content">
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/rio-dulce-guatemala/600/400" alt="Río Dulce">
+                <div class="destination-info">
+                    <h3 class="destination-title">Río Dulce</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Izabal, Guatemala
+                    </div>
+                    <p class="destination-description">
+                        Un río que parece sacado de un sueño, rodeado de selva y manglares, con aguas tranquilas que conectan el Lago Izabal con el Caribe. ¡Un paraíso para los aventureros!
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-ship"></i> Paseo en lancha por cañones y manglares</li>
+                            <li><i class="fas fa-landmark"></i> Visita al Castillo de San Felipe</li>
+                            <li><i class="fas fa-hot-tub"></i> Exploración y baño en aguas termales y cascadas</li>
+                            <li><i class="fas fa-kayak"></i> Kayak y deportes acuáticos</li>
+                            <li><i class="fas fa-fish"></i> Avistamiento de Manatíes</li>
+                            <li><i class="fas fa-drum"></i> Tours de la cultura Garifuna</li>
+                            <li><i class="fas fa-sailboat"></i> Navegación en vela</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-tshirt"></i> Llevar ropa ligera y protector solar</li>
+                            <li><i class="fas fa-heart"></i> Respetar el destino turístico</li>
+                            <li><i class="fas fa-info-circle"></i> Seguir indicaciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/tikal-templo-mayas/600/400" alt="Sitio Arqueológico Tikal">
+                <div class="destination-info">
+                    <h3 class="destination-title">Sitio Arqueológico el Tikal</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Petén, Guatemala
+                    </div>
+                    <p class="destination-description">
+                        La joya del mundo maya, rodeada de selva y misterio. Sus templos milenarios te transportan a una civilización legendaria, Tikal una de las ciudades más poderosas y grande de la civilización maya, maravilla arquitectónica rodeada de un santuario de vida silvestre ideal para amantes de la cultura y naturaleza.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-monument"></i> Recorrido por templos y acrópolis</li>
+                            <li><i class="fas fa-sun"></i> Tours de amanecer y atardecer</li>
+                            <li><i class="fas fa-paw"></i> Observación de fauna en la selva</li>
+                            <li><i class="fas fa-camera-retro"></i> Fotografía panorámica desde el Templo IV</li>
+                            <li><i class="fas fa-museum"></i> Visita al museo</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-tint"></i> Llevar agua y sombrero</li>
+                            <li><i class="fas fa-info-circle"></i> Seguir indicaciones</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las normas del sitio Arqueológico</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/lago-peten-itza-guatemala/600/400" alt="Lago Petén Itzá">
+                <div class="destination-info">
+                    <h3 class="destination-title">Lago Petén Itzá</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Petén, Guatemala
+                    </div>
+                    <p class="destination-description">
+                        Lago Petén Itzá un vasto espejo de agua conocido por sus aguas cristalinas que a menudo adquieren un tono azul-celeste, rodeado de historia y naturaleza que crea un paisaje hermoso y un entorno tranquilo ideal para relajarse y explorar.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-ship"></i> Paseos en lancha y kayak</li>
+                            <li><i class="fas fa-binoculars"></i> Avistamiento de aves y pesca artesanal</li>
+                            <li><i class="fas fa-landmark"></i> Visita a la Isla de Flores y sitios arqueológicos cercanos</li>
+                            <li><i class="fas fa-mountain"></i> Vista panorámica en el mirador del Rey Canet</li>
+                            <li><i class="fas fa-swimmer"></i> Actividades acuáticas como Natación, Relajación en la orilla del lago</li>
+                            <li><i class="fas fa-leaf"></i> Observación de flora y fauna</li>
+                            <li><i class="fas fa-utensils"></i> Degustación de Gastronomía local</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-camera"></i> Llevar cámara y ropa cómoda</li>
+                            <li><i class="fas fa-sun"></i> Llevar protector solar</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las áreas naturales</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/laguna-lachua-guatemala/600/400" alt="Laguna Lachuá">
+                <div class="destination-info">
+                    <h3 class="destination-title">Laguna Lachuá</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Alta Verapaz, Guatemala
+                    </div>
+                    <p class="destination-description">
+                        La Laguna de Lachuá es un tesoro natural en medio de la selva guatemalteca. Sus aguas turquesa y su forma circular perfecta la convierten en un lugar mágico, rodeado de biodiversidad y tranquilidad absoluta. Ideal para quienes buscan desconexión y belleza pura.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-hiking"></i> Senderismo por selva tropical</li>
+                            <li><i class="fas fa-swimmer"></i> Nadar en aguas cristalinas</li>
+                            <li><i class="fas fa-binoculars"></i> Avistamiento de aves y fauna silvestre</li>
+                            <li><i class="fas fa-utensils"></i> Picnic en áreas designadas</li>
+                            <li><i class="fas fa-campground"></i> Camping en áreas designadas</li>
+                            <li><i class="fas fa-utensils"></i> Talleres de cocina tradicional</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-tshirt"></i> Llevar ropa cómoda</li>
+                            <li><i class="fas fa-swimmer"></i> Llevar traje de baño</li>
+                            <li><i class="fas fa-spray-can"></i> Llevar repelente y calzado adecuado</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las normas del parque</li>
+                            <li><i class="fas fa-trash-alt"></i> No dejar basura</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/hobbitenango-guatemala/600/400" alt="Hobbitenango">
+                <div class="destination-info">
+                    <h3 class="destination-title">Hobbitenango</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Guatemala
+                    </div>
+                    <p class="destination-description">
+                        Un mundo de fantasía inspirado en la Tierra Media, con vistas espectaculares a volcanes y experiencias únicas. Ideal para quienes buscan un lugar temático y naturaleza.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-route"></i> Recorridos por escenarios temáticos</li>
+                            <li><i class="fas fa-utensils"></i> Gastronomía</li>
+                            <li><i class="fas fa-gamepad"></i> Juegos, aventuras y actividades al aire libre</li>
+                            <li><i class="fas fa-hiking"></i> Senderismo y miradores</li>
+                            <li><i class="fas fa-shopping-basket"></i> Tours por el mercado artesanal</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las normas y seguir indicaciones</li>
+                            <li><i class="fas fa-tshirt"></i> Llevar ropa cómoda</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="destination-block">
+                <img src="https://picsum.photos/seed/antigua-guatemala-colonial/600/400" alt="Antigua Guatemala">
+                <div class="destination-info">
+                    <h3 class="destination-title">Antigua Guatemala</h3>
+                    <div class="destination-location">
+                        <i class="fas fa-map-marker-alt"></i> Sacatepequez, Guatemala
+                    </div>
+                    <p class="destination-description">
+                        Una ciudad que enamora con su arquitectura, historia y cultura. Un viaje al pasado con todo el encanto del presente.
+                    </p>
+                    <div class="destination-section">
+                        <h4>Actividades Principales</h4>
+                        <ul>
+                            <li><i class="fas fa-landmark"></i> Recorridos históricos y museos</li>
+                            <li><i class="fas fa-coffee"></i> Degustación de café y chocolate artesanal</li>
+                            <li><i class="fas fa-camera"></i> Fotografía en miradores y plazas coloniales</li>
+                            <li><i class="fas fa-utensils"></i> Clases de cocina guatemalteca y talleres culturales</li>
+                        </ul>
+                    </div>
+                    <div class="destination-section">
+                        <h4>Recomendaciones</h4>
+                        <ul>
+                            <li><i class="fas fa-camera"></i> Llevar cámara y calzado cómodo</li>
+                            <li><i class="fas fa-shield-alt"></i> Respetar las normas en sitios históricos</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+    </main>
+
+    <footer class="page-footer">
+        <p>&copy; 2024 Agencia de Viajes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function openTab(evt, tabName) {
+            // Ocultar todo el contenido de las pestañas
+            var tabContents = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+
+            // Quitar la clase 'active' de todos los botones de pestaña
+            var tabButtons = document.getElementsByClassName("tab-button");
+            for (var i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+
+            // Mostrar la pestaña actual y añadir la clase 'active' al botón que la abrió
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+    <!-- ...place before closing </body> -->
+<script>
+(function(){
+  const toggle = document.getElementById('mobileMenuToggle');
+  const nav = document.querySelector('.main-navigation');
+
+  function updateToggleVisibility(){
+    if(!toggle) return;
+    if (window.innerWidth <= 768) toggle.style.display = 'flex';
+    else { toggle.style.display = 'none'; nav.classList.remove('active'); toggle.classList.remove('active'); }
+  }
+  updateToggleVisibility();
+  window.addEventListener('resize', updateToggleVisibility);
+
+  if(toggle && nav){
+    toggle.addEventListener('click', function(e){
+      e.stopPropagation();
+      toggle.classList.toggle('active');
+      nav.classList.toggle('active');
+    });
+
+    // cerrar al pulsar un enlace dentro del nav (en móvil)
+    nav.addEventListener('click', function(e){
+      if (e.target.tagName === 'A' && window.innerWidth <= 768) {
+        nav.classList.remove('active');
+        toggle.classList.remove('active');
+      }
+    });
+
+    // cerrar al clicar fuera
+    window.addEventListener('click', function(e){
+      if (window.innerWidth <= 768 && nav.classList.contains('active')) {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          nav.classList.remove('active');
+          toggle.classList.remove('active');
+        }
+      }
+    });
+  }
+})();
+</script>
+<!-- ...existing code... -->
+</body>
+</html>

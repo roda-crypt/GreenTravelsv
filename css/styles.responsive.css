@@ -1,0 +1,187 @@
+
+/* Mobile first helpers */
+.hidden-mobile { display: none !important; }
+.visible-mobile { display: block !important; }
+
+/* Ensure images are responsive */
+img, .travel-card-image img, .logo-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Improve tappable hit areas for mobile */
+.nav-link, .btn-primary, .filter-tag, .suggestion-btn {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  touch-action: manipulation;
+}
+
+/* ---- Mobile tiny (<=480px) ---- */
+@media (max-width: 480px) {
+
+  /* header adjustments */
+  .header-container { padding: 0 12px; }
+  .logo-text { font-size: 1.05rem; }
+  .logo-image { width: 40px; height: 40px; }
+
+  /* Hero */
+  .hero { height: 50vh; padding: 2rem 1rem; }
+  .hero-content h1 { font-size: 1.6rem; line-height: 1.15; }
+  .hero-content p { font-size: 0.95rem; }
+
+  /* Cards stack */
+  .catalog-grid { grid-template-columns: 1fr !important; gap: 1rem; padding: 0; }
+  .travel-card { margin: 0 auto; }
+
+  /* About & values */
+  .values-grid { grid-template-columns: 1fr !important; }
+
+  /* Footer stacking */
+  .footer-content { grid-template-columns: 1fr !important; }
+
+  /* Newsletter form vertical */
+  .newsletter-form { flex-direction: column; gap: 0.75rem; padding: 0 1rem; }
+  .newsletter-form input { width: 100%; }
+  .newsletter-form button { width: 100%; }
+
+  /* Modal full screen */
+  .modal-content { width: 100%; max-width: none; height: 100%; margin: 0; border-radius: 0; }
+  .modal-header { height: 180px; }
+  .map-container { height: 240px; }
+
+  /* Chatbot bubble smaller */
+  .chatbot-bubble { right: 12px; bottom: 12px; padding: 12px; }
+  .chatbot-container { width: 100% !important; height: 100% !important; bottom: 0; right: 0; left: 0; border-radius: 0; }
+
+  /* Auth modal */
+  .auth-modal-content { padding: 1rem; }
+}
+
+/* ---- Mobile / small tablets (<=768px) ---- */
+@media (max-width: 768px) {
+
+  /* Show mobile menu toggle and hide nav links inline */
+  .mobile-menu-toggle { display: flex !important; }
+
+  /* Off-canvas tweaks */
+  .main-navigation { width: 320px; right: -100%; padding: 18px; box-sizing: border-box; }
+  .main-navigation.active { right: 0 !important; }
+
+  .hero { height: 55vh; }
+  .hero-content h1 { font-size: 2rem; }
+  .hero-content p { font-size: 1rem; }
+
+  /* Cards: single column */
+  .catalog-grid { grid-template-columns: 1fr !important; }
+
+  /* About */
+  .mission-vision { grid-template-columns: 1fr !important; }
+  .values-grid { grid-template-columns: 1fr 1fr !important; }
+
+  /* Modal */
+  .modal-content { max-width: 100% !important; margin: 0 0 0 0; border-radius: 0; height: auto; }
+
+  /* Map */
+  .map-container { height: 320px; }
+
+  /* Footer */
+  .footer-content { grid-template-columns: 1fr 1fr !important; gap: 1rem; padding: 1rem; }
+}
+
+/* ---- Tablets landscape and small laptops (769px - 1024px) ---- */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .catalog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .section-header h2 { font-size: 2rem; }
+  .hero { height: 60vh; }
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .footer-content { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ---- Desktop: medium (1025px - 1440px) ---- */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .catalog-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .hero-content { max-width: 900px; }
+}
+
+/* ---- Large desktop (>=1440px) ---- */
+@media (min-width: 1440px) {
+  .header-container { max-width: 1400px; }
+  .catalog-grid { grid-template-columns: repeat(4, 1fr); }
+  .hero-content h1 { font-size: 3.4rem; }
+}
+
+/* ---- Accessibility helpers ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  width: auto;
+  height: auto;
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Ocultar menú normal en celular */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none !important;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+
+    /* Estilo del menú slide desde la derecha */
+    .main-navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 270px;
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        transition: 0.3s ease;
+        z-index: 9999;
+    }
+
+    /* MENÚ ABIERTO */
+    .main-navigation.active {
+        right: 0;
+    }
+
+    .main-navigation a {
+        font-size: 1.2rem;
+        padding: 10px 0;
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Mostrar links cuando el off-canvas está activo */
+.main-navigation.active .nav-links {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+    padding-top: 20px;
+}
+
+/* Asegurar que cada enlace ocupe toda la línea en móvil */
+.main-navigation.active .nav-links .nav-link,
+.main-navigation.active .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 12px 16px;
+}
