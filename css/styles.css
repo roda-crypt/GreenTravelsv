@@ -327,7 +327,7 @@ header {
 /* Hero Section */
 .hero {
     height: 70vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/img/logo.jpg');
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/logo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1691,3 +1691,4 @@ footer {
 @media (min-width: 1025px){
   /* PC */
 }
+
